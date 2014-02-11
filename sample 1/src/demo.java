@@ -1,5 +1,5 @@
 
 public class demo {
-	public static
+	public static main
 
 }
