@@ -4,10 +4,10 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.kiranawala.libraries.Generic;
-import com.kiranawala.libraries.ProjectSpecific;
-import com.kiranawala.libraries.SuperTestNG;
+import com.kiranawala.libraries.ProjectSpecificKi;
+import com.kiranawala.libraries.SuperTestNGki;
 
-public class KW_CreateAcc_FewWrongValues extends SuperTestNG
+public class KW_CreateAcc_FewWrongValues extends SuperTestNGki
 {
 	@Test
 	public void testKW_CreateAcc_FewWrongValues()
@@ -18,7 +18,7 @@ public class KW_CreateAcc_FewWrongValues extends SuperTestNG
 					String xlpath ="./excelfiles/config.xlsx";
 					String sheetName = "sheet2";
 					String userName = Generic.getXlCellValue(xlpath,sheetName,0,3);
-					ProjectSpecific.createUserAccount(userName);
+					ProjectSpecificKi.createUserAccount(userName);
 					
 					Reporter.log("Step1",true);
 
@@ -36,7 +36,7 @@ public class KW_CreateAcc_FewWrongValues extends SuperTestNG
 					double month = Generic.getXlNumCellValue(xlpath, sheetName, 10, 3);
 					double year = Generic.getXlNumCellValue(xlpath, sheetName, 11,3);
 					
-					ProjectSpecific.mandatoryFields(firstName, lastName, password, address, pincode, city, mobile, alias,day, month, year);
+					ProjectSpecificKi.mandatoryFields(firstName, lastName, password, address, pincode, city, mobile, alias,day, month, year);
 					
 					Reporter.log("Step2",true);
        // Optional Field fillup
@@ -46,17 +46,17 @@ public class KW_CreateAcc_FewWrongValues extends SuperTestNG
 					String other = Generic.getXlCellValue(xlpath,sheetName,14,3);
 					double phone = Generic.getXlNumCellValue(xlpath, sheetName,15,3);
 					String refpgm = Generic.getXlCellValue(xlpath,sheetName,16,3);
-					ProjectSpecific.optionalFields(company, address2, other, phone, refpgm);	
+					ProjectSpecificKi.optionalFields(company, address2, other, phone, refpgm);	
 					
 					Reporter.log("Step3",true);	
 				
 				
 		//submit
-					ProjectSpecific.submit();
+					ProjectSpecificKi.submit();
 					
 					
 					String eMsg = "There are 3 errors :";
-					ProjectSpecific.verifySuccesMsg(eMsg);
+					ProjectSpecificKi.verifySuccesMsg(eMsg);
 					
 					
 			}

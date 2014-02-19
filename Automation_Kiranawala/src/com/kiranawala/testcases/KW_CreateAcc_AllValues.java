@@ -4,8 +4,8 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.kiranawala.libraries.Generic;
-import com.kiranawala.libraries.ProjectSpecific;
-import com.kiranawala.libraries.SuperTestNG;
+import com.kiranawala.libraries.ProjectSpecificKi;
+import com.kiranawala.libraries.SuperTestNGki;
 /**
  * Author : Siddhi
  * 
@@ -13,7 +13,7 @@ import com.kiranawala.libraries.SuperTestNG;
 
 
 
-public class KW_CreateAcc_AllValues extends SuperTestNG 
+public class KW_CreateAcc_AllValues extends SuperTestNGki 
 {
 
 		@ Test
@@ -26,7 +26,7 @@ public class KW_CreateAcc_AllValues extends SuperTestNG
 			String xlpath ="./excelfiles/config.xlsx";
 			String sheetName = "sheet2";
 			String userName = Generic.getXlCellValue(xlpath,sheetName,0,1);
-			ProjectSpecific.createUserAccount(userName);
+			ProjectSpecificKi.createUserAccount(userName);
 				
 			Reporter.log("Step1",true);
 						
@@ -43,7 +43,7 @@ public class KW_CreateAcc_AllValues extends SuperTestNG
 			double month = Generic.getXlNumCellValue(xlpath, sheetName, 10, 1);
 			double year = Generic.getXlNumCellValue(xlpath, sheetName, 11,1);
 			
-			ProjectSpecific.mandatoryFields(firstName, lastName, password, address, pincode, city, mobile, alias,day, month, year);
+			ProjectSpecificKi.mandatoryFields(firstName, lastName, password, address, pincode, city, mobile, alias,day, month, year);
 			Reporter.log("Step2",true);
 			// Optional Field fillup
 			
@@ -52,20 +52,20 @@ public class KW_CreateAcc_AllValues extends SuperTestNG
 			String other = Generic.getXlCellValue(xlpath,sheetName,14,1);
 			double phone = Generic.getXlNumCellValue(xlpath, sheetName,15,1);
 			String refpgm = Generic.getXlCellValue(xlpath,sheetName,16,1);
-			ProjectSpecific.optionalFields(company, address2, other, phone, refpgm);
+			ProjectSpecificKi.optionalFields(company, address2, other, phone, refpgm);
 		// submit
 			
-			ProjectSpecific.submit();
+			ProjectSpecificKi.submit();
 
         // Logout
-			ProjectSpecific.logout();
+			ProjectSpecificKi.logout();
 			Reporter.log("Step3",true);
 
 		//login
 			
-			ProjectSpecific.login(userName, password);
+			ProjectSpecificKi.login(userName, password);
 		//logout	
-			ProjectSpecific.logout();
+			ProjectSpecificKi.logout();
 			Reporter.log("Step4",true);	
 	   	  
 	}

@@ -4,11 +4,11 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.kiranawala.libraries.Generic;
-import com.kiranawala.libraries.ProjectSpecific;
-import com.kiranawala.libraries.SuperTestNG;
+import com.kiranawala.libraries.ProjectSpecificKi;
+import com.kiranawala.libraries.SuperTestNGki;
 
 
-public class KW_CreateAcc_MandatoryValues extends SuperTestNG 
+public class KW_CreateAcc_MandatoryValues extends SuperTestNGki 
 {
 
 		@ Test
@@ -20,7 +20,7 @@ public class KW_CreateAcc_MandatoryValues extends SuperTestNG
 			String xlpath ="./excelfiles/config.xlsx";
 			String sheetName = "sheet2";
 			String userName = Generic.getXlCellValue(xlpath,sheetName,0,2);
-			ProjectSpecific.createUserAccount(userName);
+			ProjectSpecificKi.createUserAccount(userName);
 			
 	    // Mandatory Fields fill Up
 			String firstName = Generic.getXlCellValue(xlpath,sheetName,1,2);
@@ -35,18 +35,18 @@ public class KW_CreateAcc_MandatoryValues extends SuperTestNG
 			double month = Generic.getXlNumCellValue(xlpath, sheetName,10,2);
 			double year = Generic.getXlNumCellValue(xlpath, sheetName, 11,2);
 			
-			ProjectSpecific.mandatoryFields(firstName, lastName, password, address, pincode, city, mobile, alias,day, month, year);
+			ProjectSpecificKi.mandatoryFields(firstName, lastName, password, address, pincode, city, mobile, alias,day, month, year);
 			Reporter.log("Step2");
 
 	        // Logout
-				ProjectSpecific.logout();
+				ProjectSpecificKi.logout();
 				Reporter.log("Step3");
 
 			//login
 				
-				ProjectSpecific.login(userName, password);
+				ProjectSpecificKi.login(userName, password);
 			//logout	
-				ProjectSpecific.logout();
+				ProjectSpecificKi.logout();
 				Reporter.log("Step4");	
 		   	  
 
