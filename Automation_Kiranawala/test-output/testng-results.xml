@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Opening Mozilla Firefox Browser]]>
+    </line>
+    <line>
+      <![CDATA[Navigating to URL: http://kiranawala.in/authentication?back=my-account.php]]>
+    </line>
+    <line>
+      <![CDATA[Step2]]>
+    </line>
+    <line>
+      <![CDATA[Step3]]>
+    </line>
+    <line>
+      <![CDATA[There are 3 errors :]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="99589" started-at="2014-02-19T05:56:19Z" finished-at="2014-02-19T05:57:59Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="99589" started-at="2014-02-19T05:56:19Z" finished-at="2014-02-19T05:57:59Z">
+      <class name="com.kiranawala.testcases.KW_CreateAcc_FewWrongValues">
+        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.kiranawala.testcases.KW_CreateAcc_FewWrongValues@ac774f0]" name="preCondition" is-config="true" duration-ms="49530" started-at="2014-02-19T11:26:20Z" finished-at="2014-02-19T11:27:09Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Opening Mozilla Firefox Browser]]>
+            </line>
+            <line>
+              <![CDATA[Navigating to URL: http://kiranawala.in/authentication?back=my-account.php]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- preCondition -->
+        <test-method status="PASS" signature="testKW_CreateAcc_FewWrongValues()[pri:0, instance:com.kiranawala.testcases.KW_CreateAcc_FewWrongValues@ac774f0]" name="testKW_CreateAcc_FewWrongValues" duration-ms="49877" started-at="2014-02-19T11:27:09Z" finished-at="2014-02-19T11:27:59Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Step2]]>
+            </line>
+            <line>
+              <![CDATA[Step3]]>
+            </line>
+            <line>
+              <![CDATA[There are 3 errors :]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testKW_CreateAcc_FewWrongValues -->
+      </class> <!-- com.kiranawala.testcases.KW_CreateAcc_FewWrongValues -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
